@@ -74,7 +74,7 @@
 		        			<Text id="t2"
 		        				text="{publishdate}" />
 		        			<Text id="t3"
-		        				text="{composer_ID}" />
+		        				text="{composer/firstname} {composer/lastname}" />
 		        			<!--<ObjectNumber
 		        					number="{
 		        						parts:[{path:'Price'},{path:'CurrencyCode'}],
