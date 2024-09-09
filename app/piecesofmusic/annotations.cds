@@ -1,0 +1,1 @@
+using MusicService as service from '../../srv/service';

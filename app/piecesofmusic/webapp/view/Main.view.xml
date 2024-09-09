@@ -1,0 +1,91 @@
+<mvc:View controllerName="piecesofmusic.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table 
+                id="idMusicTable"
+                items="{
+                    path: '/Pieces',
+                    sorter: {
+                        path: 'publishdate'
+                    }
+                }">
+                <!--<headerToolbar>
+		        	<OverflowToolbar id="overflowToolbar1">
+		        		<content>
+		        			<Title id="title" text="Products" level="H2"/>
+		        			<ToolbarSpacer id="toolbarSpacer"/>
+		        			<ComboBox id="idPopinLayout"
+		        				placeholder="Popin layout options"
+		        				change="onPopinLayoutChanged">
+		        				<items>
+		        					<core:Item id="item1" text="Block"
+		        						key="Block"/>
+		        					<core:Item id="item2" text="Grid Large"
+		        						key="GridLarge"/>
+		        					<core:Item id="item3" text="Grid Small"
+		        						key="GridSmall"/>
+		        				</items>
+		        			</ComboBox>
+		        			<Label text="Sticky options:" />
+		        			<CheckBox text="ColumnHeaders"
+		        				select="onSelect"/>
+		        			<CheckBox text="HeaderToolbar"
+		        				select="onSelect"/>
+		        			<CheckBox text="InfoToolbar"
+		        				select="onSelect"/>
+		        			<ToggleButton id="toggleInfoToolbar"
+		        				text="Hide/Show InfoToolbar"
+		        				press="onToggleInfoToolbar" />
+		        		</content>
+		        	</OverflowToolbar>
+		        </headerToolbar>-->
+		        <infoToolbar>
+		        	<OverflowToolbar id="overflowToolbar2">
+		        		<Label id="label" text="List of available pieces of music"/>
+		        	</OverflowToolbar>
+		        </infoToolbar>
+		        <columns>
+		        	<Column id="column1"
+		        		width="12em">
+		        		<Text id="text1" text="Name" />
+		        	</Column>
+		        	<Column id="column2"
+		        		minScreenWidth="Tablet"
+		        		demandPopin="true">
+		        		<Text id="text2" text="Date of Publishing" />
+		        	</Column>
+		        	<Column id="column3"
+		        		minScreenWidth="Desktop"
+		        		demandPopin="true"
+		        		hAlign="End">
+		        		<Text id="text3" text="Composer" />
+		        	</Column>
+		        </columns>
+		        <items>
+		        	<ColumnListItem id="colListItem" vAlign="Middle">
+		        		<cells>
+		        			<!--<ObjectIdentifier id="objId"
+		        				title="{Name}"
+		        				text="{ID}"/>-->
+		        			<Text id="t1"
+		        				text="{name}" />
+		        			<Text id="t2"
+		        				text="{publishdate}" />
+		        			<Text id="t3"
+		        				text="{composer_ID}" />
+		        			<!--<ObjectNumber
+		        					number="{
+		        						parts:[{path:'Price'},{path:'CurrencyCode'}],
+		        						type: 'sap.ui.model.type.Currency',
+		        						formatOptions: {showMeasure: false}
+		        					}"
+		        					unit="{CurrencyCode}" />-->
+		        		</cells>
+		        	</ColumnListItem>
+		        </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

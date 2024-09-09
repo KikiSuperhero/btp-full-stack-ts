@@ -12,15 +12,17 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@cap-js/cds-types": "^0.6",
     "@cap-js/cds-typer": "^0.25.0",
+    "@cap-js/cds-types": "^0.6.5",
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^8.2.0",
+    "cds-plugin-ui5": "^0.9.3",
     "sqlite3": "^5.1.4"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch:ts": "cds-ts watch"
+    "watch:ts": "cds-ts watch",
+    "watch-piecesofmusic": "cds watch --open piecesofmusic/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "requires": {
@@ -31,5 +33,8 @@
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"
-  }
+  },
+  "workspaces": [
+    "app/*"
+  ]
 }
