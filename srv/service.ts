@@ -8,7 +8,8 @@ module.exports = class MusicService extends cds.ApplicationService { async init(
         for(let piece of data) {
             const composer = await SELECT.from(Composers, piece.composer_ID) as Composer;
             if(piece.publishdate > composer.dateOfdeath) {
-                piece.name += ' (posthumous)';
+                let nameAddOn : string = ' (posthumous)';
+                piece.name += nameAddOn;
             }
         }
     });
