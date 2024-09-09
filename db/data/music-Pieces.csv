@@ -1,2 +1,6 @@
-ID,name,composer_ID,createdAt,createdBy,modifiedAt,modifiedBy
-"1234","Fuer Elise","1234",
+ID,name,publishdate,composer_ID,createdAt,createdBy,modifiedAt,modifiedBy
+"A","Fuer Elise",,"1",
+"B","Eine kleine Nachmusik","1787-06-20","2"
+"C","Trauermarsch",,"3"
+"D","9. Symphonie","1824-01-01","1"
+"E","Nocturne No. 20","1875-09-12","3"

@@ -7,5 +7,6 @@
     // "csv (semicolon)",
     // "tab",
     // "tsv"
-  ]
+  ],
+  "cds.typeGenerator.enabled": true
 }
