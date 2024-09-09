@@ -6,7 +6,8 @@ module.exports = class MusicService extends cds.ApplicationService { async init(
 
     this.after('READ', Pieces, async (data) => {
         for(let piece of data) {
-            const composer = await SELECT.from(Composers, piece.composer_ID) as Composer;
+            let composerId = piece.composer?.ID ? piece.composer.ID : piece.composer_ID; 
+            const composer = await SELECT.from(Composers, composerId) as Composer;
             if(piece.publishdate > composer.dateOfdeath) {
                 let nameAddOn : string = ' (posthumous)';
                 piece.name += nameAddOn;
